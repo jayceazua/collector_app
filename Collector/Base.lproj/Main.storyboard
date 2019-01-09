@@ -13,7 +13,7 @@
         <!--Collector-->
         <scene sceneID="mlr-sF-JYk">
             <objects>
-                <tableViewController id="Fwb-4W-96e" sceneMemberID="viewController">
+                <tableViewController id="Fwb-4W-96e" customClass="CollectableTableViewController" customModule="Collector" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="v74-9O-oL3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -46,29 +46,32 @@
             </objects>
             <point key="canvasLocation" x="-81" y="-198"/>
         </scene>
-        <!--View Controller-->
+        <!--Create Collectable View Controller-->
         <scene sceneID="doC-Ab-Cna">
             <objects>
-                <viewController id="Eig-sI-CQK" sceneMemberID="viewController">
+                <viewController id="Eig-sI-CQK" customClass="CreateCollectableViewController" customModule="Collector" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8R5-NA-1p3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Sd5-9f-fMj">
-                                <rect key="frame" x="50" y="98" width="314" height="245"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera" translatesAutoresizingMaskIntoConstraints="NO" id="Sd5-9f-fMj">
+                                <rect key="frame" x="50" y="98.333333333333314" width="314" height="314"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Sd5-9f-fMj" secondAttribute="height" multiplier="1:1" id="sCm-vh-D4j"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gSu-yc-4ft">
-                                <rect key="frame" x="50" y="350.66666666666669" width="314" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gSu-yc-4ft">
+                                <rect key="frame" x="50" y="420" width="314" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HOU-ZR-qd6">
-                                <rect key="frame" x="192" y="388.66666666666669" width="30" height="30"/>
+                                <rect key="frame" x="192" y="458" width="30" height="30"/>
                                 <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="addTapped:" destination="Eig-sI-CQK" eventType="touchUpInside" id="w71-mI-UUX"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -88,10 +91,22 @@
                     </view>
                     <navigationItem key="navigationItem" id="mW5-6n-wcE">
                         <rightBarButtonItems>
-                            <barButtonItem systemItem="camera" id="Ebo-Zd-kGh"/>
-                            <barButtonItem systemItem="organize" id="tUv-mO-2Ge"/>
+                            <barButtonItem systemItem="camera" id="Ebo-Zd-kGh">
+                                <connections>
+                                    <action selector="cameraTapped:" destination="Eig-sI-CQK" id="kUo-x1-uTZ"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="organize" id="tUv-mO-2Ge">
+                                <connections>
+                                    <action selector="mediaFolderTapped:" destination="Eig-sI-CQK" id="GR5-bH-QeD"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
+                    <connections>
+                        <outlet property="ImageView" destination="Sd5-9f-fMj" id="5cv-9L-yVv"/>
+                        <outlet property="titleTextfield" destination="gSu-yc-4ft" id="yPt-Ax-n7Y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JO3-Ws-Lvc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -114,4 +129,7 @@
             <point key="canvasLocation" x="-1033" y="-198"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="camera" width="409.60000610351562" height="409.60000610351562"/>
+    </resources>
 </document>

@@ -12,6 +12,8 @@
 		4919480C21E5AF1300236F1F /* Collector.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4919480A21E5AF1300236F1F /* Collector.xcdatamodeld */; };
 		4919480E21E5AF1300236F1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4919480D21E5AF1300236F1F /* Assets.xcassets */; };
 		4919481121E5AF1400236F1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4919480F21E5AF1400236F1F /* LaunchScreen.storyboard */; };
+		4919481921E5D7D600236F1F /* CollectableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4919481821E5D7D600236F1F /* CollectableTableViewController.swift */; };
+		4919481B21E5D7FC00236F1F /* CreateCollectableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4919481A21E5D7FC00236F1F /* CreateCollectableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		4919480D21E5AF1300236F1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4919481021E5AF1400236F1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4919481221E5AF1400236F1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4919481821E5D7D600236F1F /* CollectableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectableTableViewController.swift; sourceTree = "<group>"; };
+		4919481A21E5D7FC00236F1F /* CreateCollectableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCollectableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				4919480F21E5AF1400236F1F /* LaunchScreen.storyboard */,
 				4919481221E5AF1400236F1F /* Info.plist */,
 				4919480A21E5AF1300236F1F /* Collector.xcdatamodeld */,
+				4919481821E5D7D600236F1F /* CollectableTableViewController.swift */,
+				4919481A21E5D7FC00236F1F /* CreateCollectableViewController.swift */,
 			);
 			path = Collector;
 			sourceTree = "<group>";
@@ -135,6 +141,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4919481921E5D7D600236F1F /* CollectableTableViewController.swift in Sources */,
+				4919481B21E5D7FC00236F1F /* CreateCollectableViewController.swift in Sources */,
 				4919480C21E5AF1300236F1F /* Collector.xcdatamodeld in Sources */,
 				4919480421E5AF1300236F1F /* AppDelegate.swift in Sources */,
 			);
