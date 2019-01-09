@@ -22,7 +22,7 @@ class CreateCollectableViewController: UIViewController, UIImagePickerController
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        // code for saving images goes here...
+        // code for saving images goes here...x
     }
 
     @IBAction func mediaFolderTapped(_ sender: Any) {
