@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Collector-->
         <scene sceneID="mlr-sF-JYk">
             <objects>
                 <tableViewController id="Fwb-4W-96e" sceneMemberID="viewController">
@@ -33,7 +33,7 @@
                             <outlet property="delegate" destination="Fwb-4W-96e" id="QK9-O0-vEZ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="puu-Qu-Dai">
+                    <navigationItem key="navigationItem" title="Collector" id="puu-Qu-Dai">
                         <barButtonItem key="backBarButtonItem" title="Back" id="Dgg-aQ-mRX"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="r0I-Sr-uih">
                             <connections>
@@ -55,29 +55,30 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Sd5-9f-fMj">
-                                <rect key="frame" x="50" y="98.333333333333314" width="314" height="314"/>
+                                <rect key="frame" x="50" y="98" width="314" height="245"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Sd5-9f-fMj" secondAttribute="height" multiplier="1:1" id="sCm-vh-D4j"/>
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gSu-yc-4ft">
-                                <rect key="frame" x="50" y="420" width="314" height="30"/>
+                                <rect key="frame" x="50" y="350.66666666666669" width="314" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HOU-ZR-qd6">
-                                <rect key="frame" x="192" y="458" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HOU-ZR-qd6">
+                                <rect key="frame" x="192" y="388.66666666666669" width="30" height="30"/>
                                 <state key="normal" title="Add"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="HOU-ZR-qd6" firstAttribute="top" secondItem="gSu-yc-4ft" secondAttribute="bottom" constant="8" id="EPa-LB-KPF"/>
                             <constraint firstItem="gSu-yc-4ft" firstAttribute="width" secondItem="Sd5-9f-fMj" secondAttribute="width" id="Qgn-Gg-YTd"/>
                             <constraint firstItem="Sd5-9f-fMj" firstAttribute="top" secondItem="SsT-on-RC9" secondAttribute="top" constant="10" id="RXi-k9-JlZ"/>
                             <constraint firstItem="SsT-on-RC9" firstAttribute="bottom" secondItem="Sd5-9f-fMj" secondAttribute="bottom" constant="519" id="Twf-RQ-t7L"/>
                             <constraint firstItem="SsT-on-RC9" firstAttribute="trailing" secondItem="Sd5-9f-fMj" secondAttribute="trailing" constant="50" id="UVs-dm-18x"/>
+                            <constraint firstItem="HOU-ZR-qd6" firstAttribute="centerX" secondItem="8R5-NA-1p3" secondAttribute="centerX" id="WLI-NB-AGj"/>
                             <constraint firstItem="gSu-yc-4ft" firstAttribute="top" secondItem="Sd5-9f-fMj" secondAttribute="bottom" constant="7.6666666666666856" id="d2I-nn-MwL"/>
                             <constraint firstItem="Sd5-9f-fMj" firstAttribute="centerX" secondItem="8R5-NA-1p3" secondAttribute="centerX" id="lL3-pp-NDl"/>
                             <constraint firstItem="Sd5-9f-fMj" firstAttribute="leading" secondItem="SsT-on-RC9" secondAttribute="leading" constant="50" id="nzo-Ft-OG6"/>
@@ -85,6 +86,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="SsT-on-RC9"/>
                     </view>
+                    <navigationItem key="navigationItem" id="mW5-6n-wcE">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="camera" id="Ebo-Zd-kGh"/>
+                            <barButtonItem systemItem="organize" id="tUv-mO-2Ge"/>
+                        </rightBarButtonItems>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JO3-Ws-Lvc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
